@@ -20,4 +20,4 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             echo ${{ secrets.TOKEN }} | docker login --username ${{ github.actor }} --password-stdin ghcr.io
-            docker run --rm ghcr.io/${{ github.actor }}/bot:latest
+            docker run --rm --detach ghcr.io/${{ github.actor }}/bot:latest
